@@ -127,7 +127,7 @@
   text-align: center;
   color: white; /* Ensure text is visible */
   position: relative;
-  background: url("./assets/backgroundImage1.jpg") no-repeat right center/contain; /* Move image to the right */
+  background: url("./assets/backgroundImage1.jpg") no-repeat right center/contain; /* Desktop background image */
   background-size: 100%; /* Adjust size to fit on the right */
   background-color: black; /* Optional: Dark background for contrast */
 }
@@ -204,7 +204,7 @@
 
   /* Main Content Adjustments */
   .main-content {
-    background-position: center;
+    background: url("./assets/mobilebackgroundImage.jpg") no-repeat center center;
     background-size: cover;
     padding: 20px;
   }
