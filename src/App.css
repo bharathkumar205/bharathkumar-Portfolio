@@ -28,6 +28,7 @@
   color: #61dafb;
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -87,19 +88,15 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Center the main content */
-
-
-/* Ensure text is aligned properly */
+/* Text Content */
 .text-content {
   max-width: 50%;
   color: white;
- /* Align text to the left */
+  /* Align text to the left */
   margin-left: -400px; /* Move text slightly to the left */
 }
 
-
-/* Profile image styling */
+/* Profile Image Styling */
 .main-profile-pic {
   width: 250px;
   height: 250px;
@@ -108,20 +105,19 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Styling for the heading */
+/* Main Content Headings and Paragraphs */
 .main-content h1 {
   font-size: 48px;
   font-weight: bold;
 }
 
-/* Styling for the subheading */
 .main-content p {
   font-size: 18px;
   color: gray;
   max-width: 600px; /* Adjust the width for better readability */
 }
 
+/* Main Content Area */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -136,17 +132,16 @@
   background-color: black; /* Optional: Dark background for contrast */
 }
 
+/* Typing Text Styling */
 .typing-text {
   font-size: 20px;
   max-width: 800px;
   line-height: 1.5;
   margin-top: 10px;
-  background: rgba(0, 0, 0, 0.5); /* Add dark overlay for text visibility */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
   padding: 10px;
   border-radius: 5px;
 }
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -154,5 +149,79 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navbar Adjustments */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .logo-container {
+    gap: 5px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  /* Text Content Adjustments */
+  .text-content {
+    max-width: 90%;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Profile Image Adjustments */
+  .main-profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Main Content Adjustments */
+  .main-content {
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .main-content h1 {
+    font-size: 36px;
+  }
+
+  .main-content p {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  /* Typing Text Adjustments */
+  .typing-text {
+    font-size: 16px;
+    max-width: 90%;
+    padding: 8px;
   }
 }
