@@ -131,8 +131,8 @@
   text-align: center;
   color: white; /* Ensure text is visible */
   position: relative;
-  background: url("./assets/backgroundImage.jpg") no-repeat right center/contain; /* Move image to the right */
-  background-size: 50%; /* Adjust size to fit on the right */
+  background: url("./assets/backgroundImage1.jpg") no-repeat right center/contain; /* Move image to the right */
+  background-size: 100%; /* Adjust size to fit on the right */
   background-color: black; /* Optional: Dark background for contrast */
 }
 
