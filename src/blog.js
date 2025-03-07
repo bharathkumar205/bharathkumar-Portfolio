@@ -1,25 +1,13 @@
 import "./App.css";
-import React, { useState } from "react";
-import { FaHome, FaEnvelope, FaInstagram , FaGithub} from "react-icons/fa";
-import profilePic from "./assets/Profile.jpg"; // Import profile image
-import { TypeAnimation } from "react-type-animation"; // Import typing effect
+import React from "react";
+import { FaHome, FaEnvelope, FaInstagram, FaGithub } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 function Blog() {
-  const [showText, setShowText] = useState(false);
-
   return (
     <>
       {/* Navbar */}
       <nav className="navbar">
-        {/*<div
-          className="logo-container"
-          onMouseEnter={() => setShowText(true)}
-          onMouseLeave={() => setShowText(false)}
-        >
-          <img src={profilePic} alt="Profile" className="profile-pic" />
-          {showText && <span className="logo-text">BHARATH KUMAR</span>}
-        </div>
-        */}
         <ul className="nav-links">
           <li>
             <a href="#home">
@@ -37,30 +25,63 @@ function Blog() {
             </a>
           </li>
           <li>
-            <a href ="https://github.com/bharathkumar205"><FaGithub/></a>
+            <a href="https://github.com/bharathkumar205">
+              <FaGithub />
+            </a>
           </li>
         </ul>
       </nav>
 
-      {/* Main Content with Background Image */}
+      {/* Main Content */}
       <div className="main-content">
         <div className="text-content">
-        <h3>Hey, I’M</h3>
-        <h1>BHARATH KUMAR</h1>
-        <p className="typing-text">
-          <TypeAnimation
-            sequence={[
-              "A Frontend focused Web Developer...",
-              2000, // Pause for 2s
-              "Building the Frontend of Websites & Web Applications...",
-              2000,
-              "That leads to the success of the overall project.",
-              2000,
-            ]}
-            speed={50} // Typing speed
-            repeat={2} // Run once
-          />
-        </p>
+          <h3>Hey, I’M</h3>
+          <h1>BHARATH KUMAR</h1>
+          <p className="typing-text">
+            <TypeAnimation
+              sequence={[
+                "A Frontend focused Web Developer...",
+                2000,
+                "Building the Frontend of Websites & Web Applications...",
+                2000,
+                "That leads to the success of the overall project.",
+                2000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+            />
+          </p>
+        </div>
+      </div>
+
+      {/* Education Section */}
+      <div className="education-section">
+        <div className="education-card">
+          <h3>HTML & CSS</h3>
+          <p>Learn the basics of structuring and styling web pages.</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN Web Docs</a> | 
+          <a href="https://css-tricks.com/"> CSS Tricks</a>
+        </div>
+
+        <div className="education-card">
+          <h3>JavaScript & React</h3>
+          <p>Master modern JavaScript and React for dynamic web apps.</p>
+          <a href="https://javascript.info/">JavaScript.info</a> | 
+          <a href="https://react.dev/"> React Docs</a>
+        </div>
+
+        <div className="education-card">
+          <h3>Frontend Tools</h3>
+          <p>Enhance styling and testing with the latest tools.</p>
+          <a href="https://tailwindcss.com/">Tailwind CSS</a> | 
+          <a href="https://jestjs.io/"> Jest</a>
+        </div>
+
+        <div className="education-card">
+          <h3>Projects & Practice</h3>
+          <p>Improve skills by building real-world projects.</p>
+          <a href="https://frontendmentor.io/">Frontend Mentor</a> | 
+          <a href="https://www.codewars.com/"> CodeWars</a>
         </div>
       </div>
     </>
