@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+
 /* General Styles */
 body {
   transition: background-color 0.3s, color 0.3s;
@@ -101,6 +104,15 @@ body.light .theme-toggle-btn {
   text-align: center;
 }
 
+.main-content-text {
+  font-family:  cursive; /* Apply pixelated font */
+}
+
+.main-content-name {
+  font-family: 'Passion One', cursive; /* Apply pixelated font */
+}
+
+
 .text-content h3 {
   font-size: 24px;
   color: #bbb;
@@ -138,6 +150,18 @@ body.light .typing-text {
   background-color: #121212;
   transition: background 0.3s;
 }
+
+/* Centering the h2 title in Education Section */
+.education-section h2 {
+  font-size: 50px; /* Adjust size as needed */
+  color: #1db954;
+  text-align: center;
+  margin: 0 auto 20px auto; /* Centers the title */
+  font-family: 'Passion One', cursive; /* Apply pixelated font */
+  display: block;
+  width: 100%;
+}
+
 
 body.light .education-section {
   background-color: #f4f4f4;
@@ -196,6 +220,102 @@ body.light .education-card p {
 .education-card a:hover {
   text-decoration: underline;
 }
+
+.projects-section {
+  text-align: center; /* Ensures text inside is centered */
+  padding: 50px 20px;
+  background-color: #121212;
+  transition: background 0.3s;
+}
+
+
+body.light .projects-section {
+  background-color: #f4f4f4;
+}
+
+/* Centering the h2 title */
+/* Centering the h2 title with pixel font */
+.projects-section h2 {
+  font-size: 50px; /* Adjust size as needed */
+  color: #1db954;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Passion One', cursive; /* Apply pixelated font */
+}
+
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Project Card (Same as Education Card) */
+.project-card {
+  background: #1e1e1e;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;  /* Matches the education-card */
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+body.light .project-card {
+  background: #fff;
+  border-color: #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom Effect on Hover */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+body.light .project-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Title */
+.project-card h3 {
+  color: #1db954;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-card p {
+  color: #bbbbbb;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+body.light .project-card p {
+  color: #333;
+}
+
+/* Project Links */
+.project-card a {
+  color: #1db954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -5,8 +5,8 @@ const MainContent = () => {
   return (
     <div className="main-content">
       <div className="text-content">
-        <h3>Hey, I’M</h3>
-        <h1>BHARATH KUMAR</h1>
+        <h3 className="main-content-text">Hey, I’M</h3>
+        <h1 className="main-content-name">BHARATH KUMAR</h1>
         <p className="typing-text">
           <TypeAnimation
             sequence={[

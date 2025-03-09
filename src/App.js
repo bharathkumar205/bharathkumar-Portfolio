@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 import EducationSection from "./components/EducationSection";
+import ProjectsSection from "./components/ProjectsSection"; // Import the Projects section
 
 function App() {
   // Theme state
@@ -28,6 +29,7 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <MainContent />
       <EducationSection />
+      <ProjectsSection /> {/* Add the new Projects Section */}
     </>
   );
 }

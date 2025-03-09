@@ -38,6 +38,7 @@ const educationData = [
 const EducationSection = () => {
   return (
     <div className="education-section">
+        <h2>Skills</h2>
       {educationData.map((item, index) => (
         <div className="education-card" key={index}>
           <h3>{item.title}</h3>
