@@ -1,30 +1,57 @@
 /* General Styles */
 body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme (Default) */
+body.dark {
   background-color: #121212;
   color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+}
+
+/* Light Theme */
+body.light {
+  background-color: #f4f4f4;
+  color: black;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
-  padding: 15px;
+  justify-content: flex-end; /* Align everything to the right */
+  align-items: center;
+  padding: 15px 30px;
   background-color: #000;
+  transition: background 0.3s;
 }
 
-.nav-links {
-  margin-left: auto;
-  margin-right: 20px;
-  list-style: none;
-  display: flex;
-  gap: 20px;
+body.light .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Navbar Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end; /* Push everything to the right */
+  gap: 20px; /* Add spacing between links and button */
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
 
 .nav-links li {
-  display: inline;
+  display: flex;
+  align-items: center; /* Ensure icons align properly */
 }
 
 .nav-links a {
@@ -32,9 +59,35 @@ body {
   text-decoration: none;
   font-size: 22px;
   transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+body.light .nav-links a {
+  color: black;
 }
 
 .nav-links a:hover {
+  color: #1db954;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 5px 10px;
+  padding-bottom: 0px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+body.light .theme-toggle-btn {
+  color: black;
+}
+
+.theme-toggle-btn:hover {
   color: #1db954;
 }
 
@@ -53,6 +106,10 @@ body {
   color: #bbb;
 }
 
+body.light .text-content h3 {
+  color: #666;
+}
+
 .text-content h1 {
   font-size: 48px;
   color: #1db954;
@@ -67,6 +124,10 @@ body {
   border-radius: 5px;
 }
 
+body.light .typing-text {
+  background: #f4f4f4;
+}
+
 /* Education Section */
 .education-section {
   display: flex;
@@ -75,6 +136,11 @@ body {
   gap: 20px;
   padding: 50px 20px;
   background-color: #121212;
+  transition: background 0.3s;
+}
+
+body.light .education-section {
+  background-color: #f4f4f4;
 }
 
 /* Education Card */
@@ -89,9 +155,20 @@ body {
   text-align: center;
 }
 
+body.light .education-card {
+  background: #fff;
+  border-color: #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom Effect on Hover */
 .education-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);  /* Smooth zoom effect */
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+body.light .education-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .education-card h3 {
@@ -104,6 +181,10 @@ body {
   color: #bbbbbb;
   font-size: 16px;
   margin-bottom: 10px;
+}
+
+body.light .education-card p {
+  color: #333;
 }
 
 .education-card a {
@@ -136,5 +217,5 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
+  } 
 }

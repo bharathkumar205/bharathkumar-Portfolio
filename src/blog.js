@@ -1,36 +1,48 @@
 import "./App.css";
-import React from "react";
-import { FaHome, FaEnvelope, FaInstagram, FaGithub } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaHome, FaEnvelope, FaInstagram, FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
 function Blog() {
+  // Theme state
+  const [theme, setTheme] = useState("dark");
+
+  // Load theme from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.body.className = savedTheme;
+    }
+  }, []);
+
+  // Toggle theme function
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.body.className = newTheme;
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <>
       {/* Navbar */}
       <nav className="navbar">
-        <ul className="nav-links">
-          <li>
-            <a href="#home">
-              <FaHome />
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <FaEnvelope />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/bharath_2k5?igsh=N2JnZnpmenRiNWlm">
-              <FaInstagram />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/bharathkumar205">
-              <FaGithub />
-            </a>
-          </li>
-        </ul>
+        <div className="nav-container">
+          <ul className="nav-links">
+            <li><a href="#home"><FaHome /></a></li>
+            <li><a href="#contact"><FaEnvelope /></a></li>
+            <li><a href="https://www.instagram.com/bharath_2k5"><FaInstagram /></a></li>
+            <li><a href="https://github.com/bharathkumar205"><FaGithub /></a></li>
+          </ul>
+        
+          {/* Theme Toggle Button */}
+          <button className="theme-toggle-btn" onClick={toggleTheme}>
+            {theme === "dark" ? <FaSun /> : <FaMoon />}
+          </button>
+        </div>
       </nav>
+
 
       {/* Main Content */}
       <div className="main-content">
