@@ -77,8 +77,8 @@ body.light .nav-links a {
   border: none;
   color: white;
   font-size: 22px;
-  padding: 5px 10px;
-  padding-bottom: 0px;
+  padding: 0px;
+  padding-top : 5px;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -213,9 +213,10 @@ body.light .education-card p {
   }
 
   .nav-links {
-    margin: auto;
+    margin-right: auto;
     list-style: none;
     display: flex;
     gap: 20px;
-  } 
+  }  
+
 }
