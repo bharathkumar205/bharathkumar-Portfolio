@@ -3,33 +3,32 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 import EducationSection from "./components/EducationSection";
-import ProjectsSection from "./components/ProjectsSection"; // Import the Projects section
+import ProjectsSection from "./components/ProjectsSection";
+import ContactUs from "./components/ContactUs"; // Import ContactUs Component
 
 function App() {
-  // Theme state
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
+  const [showContact, setShowContact] = useState(false); // State for Contact Page
 
-  // Load theme from localStorage
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-    document.body.className = savedTheme;
-  }, []);
+    document.body.classList.remove("dark", "light");
+    document.body.classList.add(theme);
+  }, [theme]);
 
-  // Toggle theme function
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    document.body.className = newTheme;
     localStorage.setItem("theme", newTheme);
   };
 
   return (
     <>
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <MainContent />
-      <EducationSection />
-      <ProjectsSection /> {/* Add the new Projects Section */}
+      <Navbar theme={theme} toggleTheme={toggleTheme} openContact={() => setShowContact(true)} />
+      <MainContent theme={theme} />
+      <EducationSection theme={theme} />
+      <ProjectsSection theme={theme} />
+
+      {showContact && <ContactUs theme={theme} closeContact={() => setShowContact(false)} />}
     </>
   );
 }

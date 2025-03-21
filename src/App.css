@@ -309,6 +309,188 @@ body.light .project-card p {
   text-decoration: underline;
 }
 
+/* Contact Page Overlay (Backdrop) */
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden; /* Prevents background scrolling */
+}
+
+/* Contact Form Container */
+.contact-container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 80vh; /* Ensures scrollability */
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Light Mode */
+body.light .contact-container {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar Styling */
+.contact-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.contact-container::-webkit-scrollbar-thumb {
+  background: #1db954;
+  border-radius: 10px;
+}
+
+/* Form Styling */
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center; /* Center form fields */
+}
+
+.contact-container label {
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 600;
+  width: 100%;
+}
+
+body.light .contact-container label {
+  color: black;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+  font-size: 14px;
+  width: 90%; /* Ensures input fields are centered */
+  max-width: 350px; /* Limits width on larger screens */
+  outline: none;
+  transition: border 0.3s;
+}
+
+body.light .contact-container input,
+body.light .contact-container textarea {
+  background: #f4f4f4;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border: 1px solid #1db954;
+}
+
+/* Button */
+.contact-container button {
+  background: #1db954;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  max-width: 350px;
+  transition: background 0.3s;
+}
+
+.contact-container button:hover {
+  background: #17a74b;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+body.light .close-btn {
+  color: black;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .contact-container {
+    width: auto;
+    padding: 20px;
+    max-height: 80vh; /* Ensures scrollability */
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .close-btn {
+    font-size: 14px;
+    top: 6px;
+    right: 10px;
+  }
+}
+
+/* Smooth Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contact Title */
+.contact-title {
+  font-family: 'Passion One', cursive;
+  color: #1db954;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-card {
