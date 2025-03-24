@@ -1,36 +1,25 @@
 import React from "react";
 
-const educationData = [
+const educationsData = [
   {
-    title: "HTML & CSS",
-    description: "Learn the basics of structuring and styling web pages.",
+    title: "Higher Secondary",
+    description: "Government Higher Secondary School Cheyur",
     links: [
-      { url: "https://developer.mozilla.org/en-US/docs/Web/HTML", text: "MDN Web Docs |" },
-      { url: "https://css-tricks.com/", text: " CSS Tricks" }
+      { url: "https://schools.org.in/coimbatore/33121600307/government-higher-secondary-school-cheyur.html", text: "View" }
     ]
   },
   {
-    title: "JavaScript & React",
-    description: "Master modern JavaScript and React for dynamic web apps.",
+    title: "Degree",
+    description: "Angel College Of Engineering and Technology Tiruppur",
     links: [
-      { url: "https://javascript.info/", text: "JavaScript.info |" },
-      { url: "https://react.dev/", text: " React Docs" }
+      { url: "https://angelcollege.edu.in/", text: "View" }
     ]
   },
   {
-    title: "Frontend Tools",
+    title: "Internship",
     description: "Enhance styling and testing with the latest tools.",
     links: [
-      { url: "https://tailwindcss.com/", text: "Tailwind CSS |" },
-      { url: "https://jestjs.io/", text: " Jest" }
-    ]
-  },
-  {
-    title: "Projects & Practice",
-    description: "Improve skills by building real-world projects.",
-    links: [
-      { url: "https://frontendmentor.io/", text: "Frontend Mentor |" },
-      { url: "https://www.codewars.com/", text: " CodeWars" }
+      { url: "https://github.com/sjpurusothamandeveloper", text: "View" }
     ]
   }
 ];
@@ -38,8 +27,8 @@ const educationData = [
 const EducationSection = () => {
   return (
     <div className="education-section">
-        <h2>Skills</h2>
-      {educationData.map((item, index) => (
+        <h2>Education</h2>
+      {educationsData.map((item, index) => (
         <div className="education-card" key={index}>
           <h3>{item.title}</h3>
           <p>{item.description}</p>

@@ -2,8 +2,9 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
-import EducationSection from "./components/EducationSection";
+import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import EducationSection from "./components/EducationSection";
 import ContactUs from "./components/ContactUs"; // Import ContactUs Component
 
 function App() {
@@ -25,8 +26,9 @@ function App() {
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} openContact={() => setShowContact(true)} />
       <MainContent theme={theme} />
-      <EducationSection theme={theme} />
+      <SkillsSection theme={theme} />
       <ProjectsSection theme={theme} />
+      <EducationSection theme ={theme}/>
 
       {showContact && <ContactUs theme={theme} closeContact={() => setShowContact(false)} />}
     </>
